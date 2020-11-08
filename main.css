@@ -1,0 +1,22 @@
+body {
+    background-color:#ffffff ;
+}
+    body > div {
+        display: inline-block;
+        width: 800px;
+        margin-left: calc(50% - 400px);
+        background-color: seagreen;
+    }
+        img {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        background-color: orange;
+
+        }
+       div > div{
+            display: inline-block;
+            width: 40%;
+            float: right;
+            background-color: pink;
+        }
