@@ -15,9 +15,10 @@ body {
        .right {
             display: inline-block;
             width: 40%;
+            padding: 20px;
             float: right;
             border: 1px solid #cccccc;
-            border-radius: 10px;
+            border-radius: 5px;
         }
             .form {
                 display: inline-block;
@@ -26,11 +27,39 @@ body {
                 .form-row {
                     display: inline-block;
                     width: 100%;
+                    margin-bottom: 20px;
             }
                     .main-title {
                         display: inline-block;
                         width: 100%;
                         text-align: center;
+                    }
+                    .label {
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                        .required {
+                            color: red;
+                    }
+                    .input {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 10px;
+                        padding-left: 50px;
+                    }
+                    .checkbox {
+
+                    }
+                    .checkbox-label {
+
+                    }
+                    .forgot-link {
+
+                    }
+                    .btn{
+                        width: 100%;
                     }
             .form-bottom{
                 display: inline-block;
