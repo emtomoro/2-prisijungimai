@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prisijungimai</title>
 <link rel="icon" type="image/png" href="./img/favicon.png"/>
+
+<!-- resetas/suvienodinimas -->
+<link rel="stylesheet" href="./css/reset.css">
+<!-- pavieniai komponentai -->
+<link rel="stylesheet" href="./css/button.css">
+<!-- pagrindinis stilius    -->
 <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -16,20 +22,24 @@
                     <h1 class="main-title">Login</h1>
                 </div>
                 <div class="form-row">
-                    Email
+                    <label class="label" for="">Your email <span  class="required">*</span></label>
+                    <input class="input" type="email" placeholder="Email">
                 </div>
                 <div class="form-row">
-                    Password
+                    <label class="label" for="">Password <span class="required">*</span></label>
+                    <input class="input" type="password" placeholder="Password">
                 </div>
                 <div class="form-row">
-                    Remember me + Forgot password
+                    <input class="checkbox" type="checkbox">
+                    <label class="checkbox-label">Remember me</label>
+                    <a class="forgot-link" href="#">Forgot password?</a>
                 </div>
                 <div class="form-row">
-                    BTN sign in
+                    <div class="btn">Sign in</div>
                 </div>
             </form>
             <div class="form-bottom">
-                VISA KITa
+                Visa kita
             </div>
          </div>
     </div>
