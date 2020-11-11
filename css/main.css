@@ -56,7 +56,7 @@ body {
 
                     }
                     .forgot-link {
-
+                        float: right;
                     }
                     .btn{
                         width: 100%;
@@ -64,4 +64,34 @@ body {
             .form-bottom{
                 display: inline-block;
                 width: 100%;
+                text-align: center;
             }
+                .form-bottom > p {
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+                }
+                .form-bottom > .icon-list {
+                    margin-bottom: 20px;
+                }
+                    .form-bottom > .icon-list > .fa {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        border: 1px solid #333;
+                        border-radius: 7px;
+                }
+                        .form-bottom > .icon-list > .fa:hover {
+                            background-color: #36f;
+                            color: #fff;
+                            border-color: #36f;
+                            cursor: pointer;
+                        }
+                    .form-bottom > .extra-link > p {
+                        display: inline-block;
+                }
+                .form-bottom > .extra-link > a {
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #666;
+                }
