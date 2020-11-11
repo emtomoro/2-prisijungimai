@@ -28,6 +28,7 @@ body {
                     display: inline-block;
                     width: 100%;
                     margin-bottom: 20px;
+                    position: relative;
             }
                     .main-title {
                         display: inline-block;
@@ -48,6 +49,12 @@ body {
                         width: 100%;
                         padding: 10px;
                         padding-left: 50px;
+                    }
+                    .form-row > .fa {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 16px;
+                        font-size: 20px;
                     }
                     .checkbox {
 
