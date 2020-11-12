@@ -49,6 +49,14 @@ body {
                     margin-bottom: 20px;
                     position: relative;
             }
+                .name-input {
+                    display: inline-block;
+                    width: 45%;
+                    position: relative;
+                }
+                .name-input:last-child {
+                    float: right;
+                }
                     .main-title {
                         display: inline-block;
                         width: 100%;
@@ -69,7 +77,7 @@ body {
                         padding: 10px;
                         padding-left: 50px;
                     }
-                    .form-row > .fa {
+                    .form-row > .fa, .form-row > div > .fa {
                         position: absolute;
                         bottom: 10px;
                         left: 16px;
@@ -79,10 +87,10 @@ body {
 
                     }
                     .checkbox-label {
-
+                        text-transform: capitalize;
                     }
-                    .forgot-link {
-                        float: right;
+                    .terms-and-conditions{
+                        text-transform: capitalize;
                     }
                     .btn{
                         width: 100%;
