@@ -31,9 +31,22 @@ body {
             width: 50%;
             float: left;
         }
+        .left-recovery {
+            display: inline-block;
+            width: 45%;
+            float: left;
+        }
        .right {
             display: inline-block;
             width: 40%;
+            padding: 20px;
+            float: right;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .right-recovery {
+            display: inline-block;
+            width: 45%;
             padding: 20px;
             float: right;
             border: 1px solid #cccccc;
@@ -61,6 +74,13 @@ body {
                         display: inline-block;
                         width: 100%;
                         text-align: center;
+                        text-transform: capitalize;
+                    }
+                    .text-recovery {
+                        color: #8492a6;
+                        font-size: 16px;
+                        line-height: 30px;
+                        margin-bottom: 15px;
                     }
                     .label {
                         display: inline-block;
@@ -120,7 +140,7 @@ body {
                             border-color: #36f;
                             cursor: pointer;
                         }
-                    .form-bottom > .extra-link > p {
+                        .extra-link > p {
                         display: inline-block;
                 }
                 .form-bottom > .extra-link > a {
