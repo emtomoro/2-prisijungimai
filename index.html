@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="./css/button.css">
 <!-- pagrindinis stilius    -->
 <link rel="stylesheet" href="./css/main.css">
+<!-- linking css for modal-->
+<link rel="stylesheet" href="css/forgot_password.css">
 </head>
 <body>
     <a href="#"><i class="fa fa-home"></i></a>
@@ -37,7 +39,7 @@
                 <div class="form-row">
                     <input class="checkbox" type="checkbox">
                     <label class="checkbox-label">Remember me</label>
-                    <a class="forgot-link" href="#">Forgot password?</a>
+                    <a class="forgot-link pass_btn" href="#">Forgot password?</a>
                 </div>
                 <div class="form-row">
                     <div class="btn">Sign in</div>
@@ -53,10 +55,42 @@
                 </div>    
                 <div class="extra-link">
                     <p>Don't have an account ?</p> 
-                    <a href="#">Sign up</a>
+                    <a href="signup.html">Sign up</a>
                 </div>
             </div>
          </div>
     </div>
+    <div class="modal_wrapper">
+        <div class="modal_container">
+            <div class="modal wrapper">
+                <button class="cross modal_cross">X</button>
+                <h1>What's my password</h1>
+                <hr>
+                    <h3>If you have forgotten your password you can reset it here</h3>
+                    <input class="send_email" type="email" name="email" placeholder="E-mail address">
+                    <i class="fa fa-user-o email_symbol"></i>
+                    <a class="send_password" href="#">Send my password</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modalWrapper = document.querySelector('.modal_wrapper');
+        var wrapper = document.querySelector('.wrapper');
+        var passBtn = document.querySelector('.pass_btn');
+        var modalCross = document.querySelector('.modal_cross');
+        var body = document.getElementsByTagName('.body')[0];
+
+       passBtn.addEventListener('click',()=>{
+           modalWrapper.style.display = 'block';
+       })
+       modalCross.addEventListener('click',()=>{
+            modalWrapper.style.display = 'none';
+       })
+       window.addEventListener('click',(e)=>{
+        if(e.target == modalWrapper){
+            modalWrapper.style.display = 'none';
+        }
+       })
+    </script>
 </body>
 </html>
