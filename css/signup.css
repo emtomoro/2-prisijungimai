@@ -19,8 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 80%;
-    margin-top: 20%;
+    height: 85%;
+    margin-top: 15%;
     width: 400px;
     border: 1px solid rgba(166, 182, 175, 0.973);
     border-radius: 4px;
@@ -39,6 +39,7 @@ body {
     padding-left: 25px;
     border-radius: 4px;
     outline: none;
+    border: 1px solid rgba(166, 182, 175, 0.973);
 }
 
 ::-webkit-input-placeholder{
@@ -88,4 +89,60 @@ body {
 
 .required{
     color: rgb(228, 44, 81);
+}
+
+.modal_wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal{
+    height: 200px;
+    width: 400px;
+    background: #fff;
+    position: relative;  
+    border-radius: 6px; 
+    box-shadow: 5px 5px 5px 5px;
+    animation-name: openModal;
+    animation-duration: 2s;
+    background: rgb(218, 35, 35);
+}
+
+.cross{
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+.cross:hover{
+    cursor: pointer;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 20px;
+}
+
+@keyframes openModal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

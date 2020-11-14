@@ -21,7 +21,7 @@
     <div class="container">
         <img class="left" src="./img/login-image.png" alt="telefonas ir mergina">
         <div class="right">
-            <form class="form">
+            <form class="form" method="post">
                 <div class="form-row">
                     <h1 class="main-title">Login</h1>
                 </div>

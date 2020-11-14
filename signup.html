@@ -12,41 +12,91 @@
 <body>
     <div class="container">
         <div class="left">
-            <form class="form">
+            <form class="form" id="getForm">
                 <div class="form-row">
                     <h1 class="main-title">SignUp</h1>
                 </div>
                 <div class="form-row">
-                    <label class="label" for="">Your name <span  class="required">*</span></label>
-                    <input class="input" type="text" placeholder="Name" required> 
+                    <label class="label" for="">Your first name <span  class="required">*</span></label>
+                    <input id="fname" name="fname" class="input" type="text" placeholder="First Name" required> 
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <div class="form-row">
+                    <label class="label" for="">Your last name <span  class="required">*</span></label>
+                    <input id="lname" name="lname" class="input" type="text" placeholder="Last Name" required> 
                     <i class="fa fa-user-o"></i>
                 </div>
                 <div class="form-row">
                     <label class="label" for="">Your email <span  class="required">*</span></label>
-                    <input class="input" type="email" placeholder="Email" required> 
+                    <input id="email" name="email" class="input" type="email" placeholder="Email" required> 
                     <i class="fa fa-envelope-open-o"></i>
                 </div>
                 <div class="form-row">
                     <label class="label" for="">Telephone<span></span></label>
-                    <input class="input" type="text" placeholder="Telephone" required> 
+                    <input id="phone" name="phone" class="input" type="text" placeholder="Telephone"> 
                     <i class="fa fa-phone"></i>
                 </div>
                 <div class="form-row">
                     <label class="label" for="">Password <span class="required">*</span></label>
-                    <input class="input" type="password" placeholder="Password" required>
+                    <input id="pass" name="pass" class="input" type="password" placeholder="Password" required>
                     <i class="fa fa-key"></i>
                 </div>
                 <div class="form-row">
                     <label class="label" for="">Re-type Password <span class="required">*</span></label>
-                    <input class="input" type="password" placeholder="Password" required>
+                    <input id="re_pass" name="re_pass" class="input" type="password" placeholder="Password" required>
                     <i class="fa fa-key"></i>
                 </div>
                 <div class="form-row">
-                    <input type="submit" value="signup" class="btn"/>
+                    <input name="submit" type="submit" value="signup" class="btn"/>
                 </div>
             </form>
          </div>
          <img class="right" src="./img/login-image.png" alt="telefonas ir mergina">
-    </div>
+    </div>  
+    <div class="show_modal modal_wrapper">
+            <div class="modal">
+                    <div class="cross close">X</div>
+                <div class="message display_message"></div>
+            </div>
+    </div>  
+    <script>
+        document.getElementById('getForm').addEventListener('submit',getInfo);
+
+        function getInfo(e){
+            e.preventDefault();
+            var fname = document.querySelector('#fname').value;
+            var lname = document.querySelector('#lname').value;
+            var email = document.querySelector('#email').value;
+            var phone = document.querySelector('#phone').value;
+            var pass = document.querySelector('#pass').value;
+            var rePass = document.querySelector('#re_pass').value;
+            var params = "name="+fname+"&last_name="+lname+"&email="+email
+                         +"&phone="+phone+"&password="+pass+"&re_pass="+rePass;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST','process.php',true);
+            xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+
+            xhr.onload = function(){
+                var showModal = document.querySelector('.show_modal');
+                var cross = document.querySelector('.cross');
+                if(this.responseText){
+                    showModal.style.visibility = 'visible';
+                    var displayMessage = document.querySelector('.display_message');
+                    displayMessage.innerHTML=this.responseText;
+                }
+                // Close modal
+                cross.addEventListener('click',()=>{
+                    showModal.style.visibility = 'hidden';
+                })
+                window.addEventListener('click',(e)=>{
+                    if(e.target == showModal){
+                        showModal.style.visibility = 'hidden';
+                    }
+                })
+            }
+            xhr.send(params);
+        }
+    </script>
 </body>
 </html>
